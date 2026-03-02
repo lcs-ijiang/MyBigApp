@@ -26,15 +26,15 @@ struct AppPreferenceView: View {
             .padding(.top,20)
             //Language selection
             VStack(alignment: .leading, spacing: 20 ){
-                Text ("language")
-                    .font(.title2)
+                Text ("Language")
+                    .font(.title)
                     .fontWeight(.bold)
                     .padding()
                 HStack (spacing: 20){
                     LanguageButton(title: "English", isSelected: selectedLanguage == "English") {
                         selectedLanguage = "English"
                     }
-                    
+                    .padding(10)
                     LanguageButton(title: "chinese", isSelected: selectedLanguage == "Chinese") {
                         selectedLanguage = "chinese"
                     }
@@ -44,21 +44,21 @@ struct AppPreferenceView: View {
             }
               VStack(alignment: .leading, spacing: 20){
                 Text ("Notification")
-                    .font(.title2)
+                    .font(.title)
                     .fontWeight(.bold)
                     .padding(.bottom,10)
                 
                 Toggle("Match Request",isOn: Binding.constant(false))
-                    .font(.headline)
+                    .font(.title3)
                     .fontWeight(.bold)
                   
                   Toggle("New posts",isOn: Binding.constant(true))
-                      .font(.headline)
+                      .font(.title3)
                       .fontWeight(.bold)
                       
                  
                   Toggle("Message",isOn: Binding.constant(true))
-                      .font(.headline)
+                      .font(.title3)
                       .fontWeight(.bold)
                   
                   Spacer()
@@ -88,7 +88,7 @@ struct LanguageButton: View{
             Text(title)
                 .fontWeight(.medium)
                 .foregroundColor(.black)
-                .frame(width: 140, height: 100)            .background(isSelected ? Color(red: 0.3, green: 0.4, blue: 1.0) : Color(white: 1.0))
+                .frame(width: 150, height: 100)            .background(isSelected ? Color(red: 0.3, green: 0.4, blue: 1.0) : Color(white: 1.0))
                 .border(Color.black)
               
             
