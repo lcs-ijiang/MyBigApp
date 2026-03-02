@@ -11,7 +11,7 @@ struct AppPreferenceView: View {
     @State private var selectedLanguage="English"
     @State private var MatchRequest=true
     @State private var NewPosts=true
-    @State private var Message=true
+    @State private var Message=false
     var body: some View {
         VStack(alignment: .leading, spacing: 30 ){
             //Navigation Header
@@ -29,6 +29,7 @@ struct AppPreferenceView: View {
                 Text ("language")
                     .font(.title2)
                     .fontWeight(.bold)
+                    .padding()
                 HStack (spacing: 20){
                     LanguageButton(title: "English", isSelected: selectedLanguage == "English") {
                         selectedLanguage = "English"
@@ -37,10 +38,34 @@ struct AppPreferenceView: View {
                     LanguageButton(title: "chinese", isSelected: selectedLanguage == "Chinese") {
                         selectedLanguage = "chinese"
                     }
-                    
-                }
                 
+                }
+                .padding()
             }
+              VStack(alignment: .leading, spacing: 20){
+                Text ("Notification")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .padding(.bottom,10)
+                
+                Toggle("Match Request",isOn: Binding.constant(false))
+                    .font(.headline)
+                    .fontWeight(.bold)
+                  
+                  Toggle("New posts",isOn: Binding.constant(true))
+                      .font(.headline)
+                      .fontWeight(.bold)
+                      
+                 
+                  Toggle("Message",isOn: Binding.constant(true))
+                      .font(.headline)
+                      .fontWeight(.bold)
+                  
+                  Spacer()
+                  
+
+            }
+              .padding()
             
             
             //Notification and buttons
