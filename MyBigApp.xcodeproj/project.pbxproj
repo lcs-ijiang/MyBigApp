@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3FE809B12F55EB2200B26571 /* AppPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE809B02F55EB2200B26571 /* AppPreferenceView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3FE809AB2F55EB2200B26571 /* MyBigApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBigApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE809B02F55EB2200B26571 /* AppPreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPreferenceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE809AD2F55EB2200B26571 /* MyBigApp */,
+				3FE809B92F55EC8700B26571 /* Views */,
 				3FE809AC2F55EB2200B26571 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,14 @@
 				3FE809AB2F55EB2200B26571 /* MyBigApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3FE809B92F55EC8700B26571 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FE809B02F55EB2200B26571 /* AppPreferenceView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE809B12F55EB2200B26571 /* AppPreferenceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
