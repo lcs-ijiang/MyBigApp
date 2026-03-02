@@ -19,25 +19,62 @@ struct AppPreferenceView: View {
                 Image(systemName: "chevron.left")
                     .font(.title2)
                     .fontWeight(.bold)
-               Text("App Preferences")
+                Text("App Preferences")
                     .font(Font.largeTitle.bold())
                 
             }
             .padding(.top,20)
-         //Language selection
+            //Language selection
+            VStack(alignment: .leading, spacing: 20 ){
+                Text ("language")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                HStack (spacing: 20){
+                    LanguageButton(title: "English", isSelected: selectedLanguage == "English") {
+                        selectedLanguage = "English"
+                    }
+                    
+                    LanguageButton(title: "chinese", isSelected: selectedLanguage == "Chinese") {
+                        selectedLanguage = "chinese"
+                    }
+                    
+                }
+                
+            }
             
-         
+            
+            //Notification and buttons
+            
+            
+            
+            .padding()
         }
-        
-        
-        //button and tool bar
-        
-        
-        
-        .padding()
     }
 }
 
+
+struct LanguageButton: View{
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action:action) {
+            Text(title)
+                .fontWeight(.medium)
+                .foregroundColor(.black)
+                .frame(width: 140, height: 100)            .background(isSelected ? Color(red: 0.3, green: 0.4, blue: 1.0) : Color(white: 1.0))
+                .border(Color.black)
+              
+            
+        
+            
+        }
+        
+        
+ }
+    
+}
 #Preview {
     AppPreferenceView()
 }
