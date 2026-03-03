@@ -40,11 +40,27 @@ struct CampusConnectView: View {
                 }
         .padding()
         .background(Color(.systemGray6))
-        .border(Color(.systemGray4), width: 1)
-         Spacer()
+        .border(Color(.black), width: 3)
+
+                }
+            
+        //picker selector
+            Picker("", selection: $selectedTab){
+                Text("Contacts")
+                    .tag(0)
+                Text("Discovery")
+                    .tag(1)
                 
             }
-        
+            .pickerStyle(SegmentedPickerStyle())
+            .padding(20)
+            .background(Color(white:1.0))
+            
+            
+            
+            
+            
+            
             
         }
     }
