@@ -46,20 +46,36 @@ struct CampusConnectView: View {
             
         //picker selector
             Picker("", selection: $selectedTab){
-                Text("Contacts")
-                    .tag(0)
+               
                 Text("Discovery")
                     .tag(1)
-                
+                Text("Contacts(0)")
+                    .tag(0)
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(20)
             .background(Color(white:1.0))
             
+        
+        //button random match
+            VStack{
+                Button(action: {}) {
+                    HStack{
+                        Image(systemName: "shuffle")
+                        Text("Random Match")
+                    }
+                    .padding(20)
+                    .foregroundStyle(Color(.black))
+                    .background(Color(.white))
+                    .clipShape(Capsule())
+                    .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 3)
+                }
+                .padding(.top,20)
+                Spacer()
             
-            
-            
-            
+                
+                
+            }
             
             
         }
