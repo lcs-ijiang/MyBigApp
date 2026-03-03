@@ -16,7 +16,7 @@ struct CampusConnectView: View {
             VStack(spacing:0) {
     //biulding heading
         HStack{
-        Image(systemName: "person.2.fill")
+        Image(systemName: "person.2")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
@@ -72,11 +72,39 @@ struct CampusConnectView: View {
                 }
                 .padding(.top,20)
                 Spacer()
-            
+                //empty content
+                Image(systemName: "person.2")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:180, height: 200)
+                    .padding(20)
+                    .background(Color(.blue.opacity(0.15)))
+                    .clipShape(Circle())
+                    .shadow(color: .blue.opacity(0.1), radius: 5, x: 0, y: 3)
+                    .foregroundStyle(Color(.blue))
+               
+                Spacer()
                 
+                Text("That's everyone!")
+                    .font(.title2)
+                    .fontWeight(.bold)
                 
+                Text("No other user available yet. ")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                
+                Text("Check back later!")
+                    .font(.body)
+                    .foregroundColor(.secondary)
+                    
+                Image(systemName: "plus.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(9)
+                    .frame(width:130, height: 100)
+                    .foregroundStyle(Color(.systemGray4))
             }
-            
+            Spacer()
             
         }
     }
